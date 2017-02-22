@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+        xmlns="jar:///Applications/IntelliJ IDEA.app/Contents/plugins/JavaEE/lib/javaee-impl.jar!/standardSchemas/web-app_2_4.xsd" >
+</web-app>
