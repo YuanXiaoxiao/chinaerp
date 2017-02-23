@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app
-        xmlns="jar:///Applications/IntelliJ IDEA.app/Contents/plugins/JavaEE/lib/javaee-impl.jar!/standardSchemas/web-app_2_4.xsd" >
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+          version="2.5">
+    <servlet>
+        <servlet-name>chinaerp</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <description>加载/WEB-INF/spring/目录下的所有XML作为Spring MVC的配置文件</description>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:/spring/spring-*.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>chinaerp</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>

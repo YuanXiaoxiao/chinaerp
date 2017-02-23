@@ -12,5 +12,5 @@ public interface IUserservice {
      * @param account
      * @return
      */
-    boolean login(Account account);
+    boolean login();
 }

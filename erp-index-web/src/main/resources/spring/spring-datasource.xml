@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:component-scan base-package="cn.china.erp.index"/>
 
     <!--#jdbc.master.password        = guanghua-->
-    <!--#jdbc.master.url             = jdbc:mysql://115.231.103.216:3306/erp?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull-->
+    <!--#jdbc.master.url             = jdbc:mysql://127.0.0.1:3306/erp?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull-->
     <!--#jdbc.master.username        = superboss-->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -15,9 +17,9 @@
         <property name="password" value="guanghua"/>
     </bean>
 
-    <bean id="userDAO" class="cn.china.erp.index.dao.UserDAO">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
+    <!--<bean id="jdbcBaseDao" class="cn.china.erp.index.dao.JdbcBaseDao">-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
     <!--<bean id="userDao" class="cn.china.erp.index.dao.UserDAO">-->
         <!--<property name="dataSource" ref="dataSource"/>-->
     <!--</bean>-->
