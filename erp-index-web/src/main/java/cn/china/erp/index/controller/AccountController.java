@@ -23,4 +23,9 @@ public class AccountController {
     public Object login(Account account){
         return userService.login();
     }
+
+    @RequestMapping(value = "ceshi", method = RequestMethod.GET)
+    public Object ceshi(){
+        return "ceshi";
+    }
 }
