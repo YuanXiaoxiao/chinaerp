@@ -1,7 +1,5 @@
 package cn.china.erp.index.service;
 
-import cn.china.erp.index.bean.Account;
-
 /**
  * Created by lixiang on 17/2/20.
  */

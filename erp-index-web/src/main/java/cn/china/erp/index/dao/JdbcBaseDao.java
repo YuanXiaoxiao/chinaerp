@@ -14,13 +14,13 @@ import javax.sql.DataSource;
 public class JdbcBaseDao {
 
     @Resource
-    private DataSource dataSource;
+    protected DataSource dataSource;
 
     private JdbcTemplate jdbcTemplate;
 
-//    public void setDataSource(DataSource dataSource) {
-//        this.dataSource = dataSource;
-//    }
+    public void setDataSource(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 
     //注入dataSource， 将dataSource传递给jdbctemplate的构造方法里，构造出jdbctemplate的对象
     public JdbcTemplate getJdbcTemplate() {

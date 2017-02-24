@@ -13,6 +13,11 @@
 1.2配置xml文件
 1.3加@responsebody注解
 
+20170224-01
+1. 通过xml配置bean时，A类注入C对象属性，A的子类B获取不到该C对象，分析了一下原因，解决方案有两种
+1.1 将A中的C属性声明static
+1.2 在B的bean声明中，加入parent属性
+
 ## Issue
 #### 这里暂时记录下，目前存在的代码实现上的问题
 #### 1. xml配置bean注入 
@@ -24,3 +29,7 @@ jdbcTemplateDao中， datasource通过xml配置注入，注入失败
 #### 3. 容器的部署问题
 配置文件修改，需要重新启动tomcat
 jsp页面的修改，直接重新刷新页面即可
+
+#### intellij idea shortcut 常用快捷键
+1. 去除没有用到的import keymap当中搜索 optimize import， control + alt + o ( MAX OX 10.5)
+2. 查找spring requestmapping  keymap当中搜索 symbol ， alt + command + O  ( MAX OX 10.5)

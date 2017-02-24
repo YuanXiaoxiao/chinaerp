@@ -20,6 +20,7 @@ public class AccountController {
     @Resource
     private UserService userService;
 
+    @ResponseBody
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public Object login(Account account){
         return userService.login();
