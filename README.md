@@ -11,7 +11,7 @@
 1. 新增messageconverter，使用fastjson
 1.1引入jar包依赖
 1.2配置xml文件
-1.3加@responsebody注解
+1.3加@responsebody注解, annotation that indicates a method return value should be bound to the web response body.
 
 20170224-01
 1. 通过xml配置bean时，A类注入C对象属性，A的子类B获取不到该C对象，分析了一下原因，解决方案有两种

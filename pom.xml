@@ -15,6 +15,7 @@
 
     <properties>
         <org.springframework.version>4.2.3.RELEASE</org.springframework.version>
+        <org.springframework.security.version>4.2.1.RELEASE</org.springframework.security.version>
         <version.mysql>5.1.24</version.mysql>
         <version.junit>4.10</version.junit>
         <version.fastjson>1.1.46</version.fastjson>
@@ -28,6 +29,7 @@
                 <version>${version.junit}</version>
                 <scope>test</scope>
             </dependency>
+
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
@@ -59,6 +61,26 @@
                 <version>${version.fastjson}</version>
             </dependency>
 
+            <!-- spring security 的两个依赖-->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${org.springframework.security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${org.springframework.security.version}</version>
+            </dependency>
+
+            <!-- spring security builds against spring framework 4.3.5, but should work with 4.0.x for security transaction-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>4.3.5.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
             <!--<dependency>-->
             <!--<groupId>org.aspectj</groupId>-->
