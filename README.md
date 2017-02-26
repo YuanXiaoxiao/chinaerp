@@ -18,6 +18,14 @@
 1.1 将A中的C属性声明static
 1.2 在B的bean声明中，加入parent属性
 
+20170224-02
+~~1. add spring-security~~
+~~1.1 securityconfig~~
+~~1.2 securitywebapplicationinitializer~~
+
+20170226-01
+1. add spring security
+
 ## Issue
 #### 这里暂时记录下，目前存在的代码实现上的问题
 #### 1. xml配置bean注入 

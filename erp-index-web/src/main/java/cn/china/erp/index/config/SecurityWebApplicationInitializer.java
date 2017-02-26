@@ -1,5 +1,6 @@
 package cn.china.erp.index.config;
 
+import cn.china.erp.index.security.SecurityConfiguration;
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 
 /**
@@ -11,6 +12,6 @@ import org.springframework.security.web.context.AbstractSecurityWebApplicationIn
 public class SecurityWebApplicationInitializer extends AbstractSecurityWebApplicationInitializer {
 
     public SecurityWebApplicationInitializer() {
-        super(SecurityConfig.class);
+        super(SecurityConfiguration.class);
     }
 }
