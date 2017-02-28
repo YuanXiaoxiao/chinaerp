@@ -2,6 +2,8 @@
 //
 //import cn.china.erp.index.bean.Account
 //import cn.china.erp.index.dao.UserDAO
+//import org.junit.Test
+//import org.springframework.beans.factory.annotation.Autowired
 //
 //
 ///**
@@ -9,7 +11,10 @@
 // */
 //class UserServiceTest extends GroovyTestCase {
 //
+//    @Autowired
 //    def account = new Account()
+//
+//    @Autowired
 //    def userDAO = new UserDAO()
 //
 //    void setUp() {
@@ -23,6 +28,7 @@
 //
 //    }
 //
+//    @Test
 //    void testLogin() {
 //        assertEquals(userDAO.getAccount(account).getPassword(), "passwordofli")
 //    }
