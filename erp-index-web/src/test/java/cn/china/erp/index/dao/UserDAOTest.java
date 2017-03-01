@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 public class UserDAOTest extends TestCase{
 
     @Resource
-    private UserDAO userDAO;
+    private AccountDAO userDAO;
 
     @Resource
     private Account account;

@@ -5,6 +5,7 @@ package cn.china.erp.index.bean
  */
 class User {
 
+    long id
     String username
     String password
     String telphone

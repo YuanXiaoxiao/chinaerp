@@ -61,6 +61,14 @@
                 <version>${version.fastjson}</version>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+            <!-- ibatis依赖 springframework 4.0的版本不再支持ibatis -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>3.2.8.RELEASE</version>
+            </dependency>
+
             <!-- spring security 的两个依赖-->
             <dependency>
                 <groupId>org.springframework.security</groupId>

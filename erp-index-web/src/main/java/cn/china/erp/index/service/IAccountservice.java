@@ -3,7 +3,7 @@ package cn.china.erp.index.service;
 /**
  * Created by lixiang on 17/2/20.
  */
-public interface IUserservice {
+public interface IAccountservice {
 
     /**
      * 登录

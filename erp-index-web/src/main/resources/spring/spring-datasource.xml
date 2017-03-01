@@ -14,6 +14,15 @@
         <property name="password" value="guanghua"/>
     </bean>
 
+    <bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocation" value="classpath:sqlmap-config.xml"/>
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--<bean id="sqlMapClientDaoSupport" class="cn.china.erp.index.service.UserService">-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
+
     <!--<bean id="jdbcBaseDao" class="cn.china.erp.index.dao.JdbcBaseDao">-->
         <!--<property name="dataSource" ref="dataSource"/>-->
     <!--</bean>-->

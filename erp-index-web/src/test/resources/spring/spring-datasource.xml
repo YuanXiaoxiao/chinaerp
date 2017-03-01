@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+       <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+       <!--xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">-->
 
-    <!--#jdbc.master.password        = guanghua-->
-    <!--#jdbc.master.url             = jdbc:mysql://127.0.0.1:3306/erp?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull-->
-    <!--#jdbc.master.username        = superboss-->
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url"
-                  value="jdbc:mysql://127.0.0.1:3306/chinaerp?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull"/>
-        <property name="username" value="superboss"/>
-        <property name="password" value="guanghua"/>
-    </bean>
-
-    <!--<bean id="jdbcBaseDao" class="cn.china.erp.index.dao.JdbcBaseDao">-->
-        <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--&lt;!&ndash;#jdbc.master.password        = guanghua&ndash;&gt;-->
+    <!--&lt;!&ndash;#jdbc.master.url             = jdbc:mysql://127.0.0.1:3306/erp?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull&ndash;&gt;-->
+    <!--&lt;!&ndash;#jdbc.master.username        = superboss&ndash;&gt;-->
+    <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+        <!--<property name="url"-->
+                  <!--value="jdbc:mysql://127.0.0.1:3306/chinaerp?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull"/>-->
+        <!--<property name="username" value="superboss"/>-->
+        <!--<property name="password" value="guanghua"/>-->
     <!--</bean>-->
-    <!---->
-    <!--<bean id="userDao" class="cn.china.erp.index.dao.UserDAO" parent="jdbcBaseDao" />-->
 
-</beans>
+    <!--&lt;!&ndash;<bean id="jdbcBaseDao" class="cn.china.erp.index.dao.JdbcBaseDao">&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="dataSource" ref="dataSource"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;</bean>&ndash;&gt;-->
+    <!--&lt;!&ndash;&ndash;&gt;-->
+    <!--&lt;!&ndash;<bean id="userDao" class="cn.china.erp.index.dao.UserDAO" parent="jdbcBaseDao" />&ndash;&gt;-->
+
+<!--</beans>-->
