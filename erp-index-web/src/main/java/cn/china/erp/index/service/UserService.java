@@ -1,14 +1,21 @@
 package cn.china.erp.index.service;
 
 import cn.china.erp.index.bean.User;
+import cn.china.erp.index.dao.UserDAO;
 import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
  * Created by lixiang on 17/3/1.
  */
-public class UserService extends SqlMapClientDaoSupport implements IUserService{
+@Service
+public class UserService extends SqlMapClientDaoSupport implements IUserService {
+
+    @Resource
+    private UserDAO userDAO;
 
     @Override
     public boolean insertUser(User user) {
@@ -26,8 +33,8 @@ public class UserService extends SqlMapClientDaoSupport implements IUserService{
     }
 
     @Override
-    public User queryById(int id) {
-        return null;
+    public User getUserById(long id) {
+        return userDAO.queryById(id);
     }
 
     @Override

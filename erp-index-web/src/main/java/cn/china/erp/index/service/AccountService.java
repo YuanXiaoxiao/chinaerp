@@ -12,10 +12,10 @@ import javax.annotation.Resource;
 public class AccountService implements IAccountservice {
 
     @Resource
-    private AccountDAO userDAO;
+    private AccountDAO accountDAO;
 
     @Override
     public boolean login() {
-        return "lixiang".equals(userDAO.getAccount().getUsername());
+        return "lixiang".equals(accountDAO.getAccount().getUsername());
     }
 }

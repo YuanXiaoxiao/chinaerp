@@ -41,6 +41,9 @@ jdbcTemplateDao中， datasource通过xml配置注入，注入失败
 配置文件修改，需要重新启动tomcat
 jsp页面的修改，直接重新刷新页面即可
 
+#### 4. ibatis的使用问题
+注入sqlmapclient失败
+
 #### intellij idea shortcut 常用快捷键
 1. 去除没有用到的import keymap当中搜索 optimize import， control + alt + o ( MAX OX 10.5)
 2. 查找spring requestmapping  keymap当中搜索 symbol ， alt + command + O  ( MAX OX 10.5)

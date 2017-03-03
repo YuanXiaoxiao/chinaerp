@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<!DOCTYPE sqlMap
+        PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+        "http://www.ibatis.com/dtd/sql-map-2.dtd">
 <sqlMap>
+    <resultMap id="user" class="cn.china.erp.index.bean.User">
+        <result property="id" column="id" />
+        <result property="username" column="user_name" />
+        <result property="password" column="pass_word" />
+    </resultMap>
 
-    <select id="userById" >
 
+    <select id="userById" parameterClass="long" resultMap="user">
+        select * from user where id = #id#
     </select>
 </sqlMap>

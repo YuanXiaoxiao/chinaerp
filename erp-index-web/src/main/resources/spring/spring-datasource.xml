@@ -14,19 +14,17 @@
         <property name="password" value="guanghua"/>
     </bean>
 
+    <!-- 获取sqlmapclient，注入到sqlmapclienttemplate中，再将sqlmapclienttemplate注入到sqlmapclientdaosupport中 -->
     <bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
         <property name="configLocation" value="classpath:sqlmap-config.xml"/>
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <!--<bean id="sqlMapClientDaoSupport" class="cn.china.erp.index.service.UserService">-->
-        <!--<property name="dataSource" ref="dataSource"/>-->
-    <!--</bean>-->
+    <bean id="sqlMapClientTemplate" class="org.springframework.orm.ibatis.SqlMapClientTemplate">
+        <property name="sqlMapClient" ref="sqlMapClient"/>
+    </bean>
 
-    <!--<bean id="jdbcBaseDao" class="cn.china.erp.index.dao.JdbcBaseDao">-->
-        <!--<property name="dataSource" ref="dataSource"/>-->
-    <!--</bean>-->
-    <!---->
-    <!--<bean id="userDao" class="cn.china.erp.index.dao.UserDAO" parent="jdbcBaseDao" />-->
-
+    <bean id="SqlMapClientDaoSupport" class="cn.china.erp.index.dao.UserDAO">
+        <property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"/>
+    </bean>
 </beans>

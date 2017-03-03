@@ -19,6 +19,7 @@
         <version.mysql>5.1.24</version.mysql>
         <version.junit>4.10</version.junit>
         <version.fastjson>1.1.46</version.fastjson>
+        <version.ibatis>2.3.4.726</version.ibatis>
     </properties>
 
     <dependencyManagement>
@@ -101,6 +102,13 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${version.mysql}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.ibatis</groupId>
+                <artifactId>ibatis-sqlmap</artifactId>
+                <version>${version.ibatis}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

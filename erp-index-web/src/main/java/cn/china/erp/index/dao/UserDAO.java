@@ -1,11 +1,10 @@
 package cn.china.erp.index.dao;
 
 import cn.china.erp.index.bean.User;
+import com.ibatis.sqlmap.client.SqlMapClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
 import org.springframework.stereotype.Repository;
-
-import javax.activation.DataSource;
-import javax.annotation.Resource;
 
 /**
  * Created by lixiang on 17/3/1.
@@ -13,10 +12,7 @@ import javax.annotation.Resource;
 @Repository
 public class UserDAO extends SqlMapClientDaoSupport {
 
-//    @Resource
-//    private DataSource dataSource;
-
-    public User getUserById(long id){
-        return (User) getSqlMapClientTemplate().queryForObject("userById");
+    public User queryById(long id) {
+        return (User) getSqlMapClientTemplate().queryForObject("userById", id);
     }
 }

@@ -12,6 +12,6 @@ public interface IUserService {
     boolean insertUser(User user);   //添加
     boolean deleteById(int id);            //删除
     boolean updateUser(User user);    //修改
-    User queryById(int id);              //根据ID查询
+    User getUserById(long id);              //根据ID查询
     List<User> queryAllUser();
 }

@@ -18,12 +18,12 @@ import javax.annotation.Resource;
 public class AccountController {
 
     @Resource
-    private IAccountservice userService;
+    private IAccountservice accountService;
 
     @ResponseBody
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public Object login(Account account){
-        return userService.login();
+        return accountService.login();
     }
 
     @RequestMapping(value = "ceshi", method = RequestMethod.GET)
