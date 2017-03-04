@@ -12,7 +12,7 @@ import java.util.List;
  * Created by lixiang on 17/3/1.
  */
 @Service
-public class UserService extends SqlMapClientDaoSupport implements IUserService {
+public class UserService implements IUserService {
 
     @Resource
     private UserDAO userDAO;

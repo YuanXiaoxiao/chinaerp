@@ -19,7 +19,7 @@ public class UserDAO extends SqlMapClientDaoSupport {
 
     @PostConstruct
     protected void inject(){
-        super.setSqlMapClient(sqlMapClient);
+        this.setSqlMapClient(sqlMapClient);
     }
     public User queryById(long id) {
         return (User) getSqlMapClientTemplate().queryForObject("userById", id);
