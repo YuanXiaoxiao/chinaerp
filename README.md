@@ -29,6 +29,9 @@
 20170226-01
 1. add spring security
 
+20170303-01 
+1. add ibatis
+
 ## Issue
 #### 这里暂时记录下，目前存在的代码实现上的问题
 #### 1. xml配置bean注入 
