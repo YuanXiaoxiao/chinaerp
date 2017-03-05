@@ -5,6 +5,7 @@ import cn.china.erp.index.service.IUserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 
@@ -19,6 +20,7 @@ public class UserController {
     @Resource
     private IUserService userService;
 
+    @ResponseBody
     @RequestMapping(value = "/queryById", method = RequestMethod.GET)
     public User getUserById(long id){
         return userService.getUserById(id);

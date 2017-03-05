@@ -12,15 +12,16 @@ import javax.annotation.Resource;
  * Created by lixiang on 17/3/1.
  */
 @Repository
-public class UserDAO extends SqlMapClientDaoSupport {
+public class UserDAO extends IbatisBaseDAO {
 
-    @Resource
-    protected SqlMapClient sqlMapClient;
+//    @Resource
+//    protected SqlMapClient sqlMapClient;
+//
+//    @PostConstruct
+//    protected void inject(){
+//        this.setSqlMapClient(sqlMapClient);
+//    }
 
-    @PostConstruct
-    protected void inject(){
-        this.setSqlMapClient(sqlMapClient);
-    }
     public User queryById(long id) {
         return (User) getSqlMapClientTemplate().queryForObject("userById", id);
     }

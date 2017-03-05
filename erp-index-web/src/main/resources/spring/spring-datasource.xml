@@ -20,15 +20,4 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <!--<bean id="sqlMapClientTemplate" class="org.springframework.orm.ibatis.SqlMapClientTemplate">-->
-        <!--<property name="sqlMapClient" ref="sqlMapClient"/>-->
-    <!--</bean>-->
-
-    <!--<bean id="SqlMapClientDaoSupport" class="cn.china.erp.index.dao.UserDAO">-->
-        <!--<property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"/>-->
-    <!--</bean>-->
-
-    <!--<bean id="sqlmapclientDAO" class="org.springframework.orm.ibatis.support.SqlMapClientDaoSupport">-->
-        <!--<property name="sqlMapClient" ref="sqlMapClient"/>-->
-    <!--</bean>-->
 </beans>

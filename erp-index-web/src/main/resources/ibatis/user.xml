@@ -5,8 +5,8 @@
 <sqlMap>
     <resultMap id="user" class="cn.china.erp.index.bean.User">
         <result property="id" column="id" />
-        <result property="username" column="user_name" />
-        <result property="password" column="pass_word" />
+        <result property="username" column="username" />
+        <result property="password" column="password" />
     </resultMap>
 
 
