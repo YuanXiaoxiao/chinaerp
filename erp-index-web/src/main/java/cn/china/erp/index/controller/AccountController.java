@@ -2,6 +2,8 @@ package cn.china.erp.index.controller;
 
 import cn.china.erp.index.bean.Account;
 import cn.china.erp.index.service.IAccountservice;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +19,8 @@ import javax.annotation.Resource;
 //@Scope("prototype")  默认是单例模式， prototype每次请求都会新建一个实例
 public class AccountController {
 
+    private Logger logger = LoggerFactory.getLogger(AccountController.class);
+
     @Resource
     private IAccountservice accountService;
 
@@ -28,6 +32,7 @@ public class AccountController {
 
     @RequestMapping(value = "ceshi", method = RequestMethod.GET)
     public Object ceshi(){
+        logger.info("这里输出的info级别的日志");
         return "ceshi";
     }
 

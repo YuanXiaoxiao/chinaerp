@@ -2,6 +2,8 @@ package cn.china.erp.index.controller;
 
 import cn.china.erp.index.bean.User;
 import cn.china.erp.index.service.IUserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +18,8 @@ import javax.annotation.Resource;
 @RequestMapping(value = "/user")
 @Controller
 public class UserController {
+
+    private final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Resource
     private IUserService userService;
