@@ -33,8 +33,9 @@
 1. add ibatis
 
 20170307-01
-1. add log4j  实现方式 slf4j && logback
+1. add 日志  实现方式 slf4j && logback
 1.1 查找顺序logback.groovy-->logback-test.xml-->logback.xml,详细配置还是参考文档http://logback.qos.ch/documentation.html
+1.2 logback的日志级别从小到大 ：TRACE, DEBUG, INFO, WARN, ERROR
 
 ## Issue
 #### 这里暂时记录下，目前存在的代码实现上的问题

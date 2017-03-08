@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration>
+<configuration scan="true" scanPeriod="1 seconds" debug="false">
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%d{yy.MM.dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
-    <logger name="org.exam" level="debug" />
-    <logger name="org.springframework.beans.factory" level="info" />
 
-    <!-- root 的打印级别为warn， 指定了名字为console的appender， 打印时将级别 大于等于warn级别的日志都打印出来-->
-    <!-- all > trace > debug > info > error > fatal > off > null -->
+    <logger name="cn.china.erp.index.controller" level="warn" additivity="true"/>
+
+
+    <!-- root 的日志级别， 比当前级别大的级别都会打印出来-->
+    <!-- logback的日志级别从小到大 ：TRACE, DEBUG, INFO, WARN, ERROR -->
     <root level="info">
         <appender-ref ref="console"/>
     </root>

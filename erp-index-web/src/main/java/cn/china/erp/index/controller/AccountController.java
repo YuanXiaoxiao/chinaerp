@@ -32,7 +32,12 @@ public class AccountController {
 
     @RequestMapping(value = "ceshi", method = RequestMethod.GET)
     public Object ceshi(){
-        logger.info("这里输出的info级别的日志");
+        //TRACE, DEBUG, INFO, WARN, ERROR
+        logger.trace("trace级别的日志");
+        logger.debug("debug级别的日志");
+        logger.info("info级别的日志");
+        logger.warn("warn级别的日志");
+        logger.error("error级别的日志");
         return "ceshi";
     }
 
