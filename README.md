@@ -37,6 +37,10 @@
 1.1 查找顺序logback.groovy-->logback-test.xml-->logback.xml,详细配置还是参考文档http://logback.qos.ch/documentation.html
 1.2 logback的日志级别从小到大 ：TRACE, DEBUG, INFO, WARN, ERROR
 
+20170309-01
+1. logback在控制台输出sql日志，用来追踪问题 添加log4j-over-slf4j依赖
+1.1 仍旧有有问题的点是，打出了其他的日志
+
 ## Issue
 #### 这里暂时记录下，目前存在的代码实现上的问题
 #### 1. xml配置bean注入 
@@ -56,3 +60,4 @@ jsp页面的修改，直接重新刷新页面即可
 1. 去除没有用到的import keymap当中搜索 optimize import， control + alt + o ( MAX OX 10.5)
 2. 查找spring requestmapping  keymap当中搜索 symbol ， alt + command + O  ( MAX OX 10.5)
 3. 按层级选择代码 alt + 向上箭头 entends select
+4. 跳回刚才的代码段  command + []

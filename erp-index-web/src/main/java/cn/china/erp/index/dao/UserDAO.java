@@ -14,14 +14,6 @@ import javax.annotation.Resource;
 @Repository
 public class UserDAO extends IbatisBaseDAO {
 
-//    @Resource
-//    protected SqlMapClient sqlMapClient;
-//
-//    @PostConstruct
-//    protected void inject(){
-//        this.setSqlMapClient(sqlMapClient);
-//    }
-
     public User queryById(long id) {
         return (User) getSqlMapClientTemplate().queryForObject("userById", id);
     }

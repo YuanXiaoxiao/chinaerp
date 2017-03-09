@@ -27,6 +27,7 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value = "/queryById", method = RequestMethod.GET)
     public User getUserById(long id){
+        logger.info("info");
         return userService.getUserById(id);
     }
 }
