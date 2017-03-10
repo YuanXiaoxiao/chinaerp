@@ -1,9 +1,6 @@
 //package cn.china.erp.index.service;
 //
-//import cn.china.erp.index.bean.Account;
-//import cn.china.erp.index.bean.User;
 //import cn.china.erp.index.dao.UserDAO;
-//import junit.framework.TestCase;
 //import org.junit.Before;
 //import org.junit.Test;
 //
@@ -12,19 +9,20 @@
 ///**
 // * Created by lixiang on 17/2/21.
 // */
-//public class UserServiceTest extends TestCase{
+//public class UserServiceTest {
 //
+//    @Resource
 //    private UserService userService;
-//    private Account account;
+//
+//    @Resource
+//    private UserDAO userDAO;
 //
 //    @Before
-//    void setup(){
-//        userService = new UserService();
-//        account = new Account();
-//        account.setUsername("lixiang");
+//    public void setup(){
 //    }
 //
 //    @Test
-//    void testLogin(){
+//    public void testLogin(){
+//        userService.getUserById(11111111);
 //    }
 //}
