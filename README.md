@@ -78,6 +78,18 @@ jsp页面的修改，直接重新刷新页面即可
 #### 4. ibatis的使用问题
 注入sqlmapclient失败, 是因为userdao 继承了sqlmapclientdaosupport， userservice也同时继承了sqlmapclientdaosupport，导致new了两个sqlmaptempldate出来
 
+#### 5. 控制台打印sql语句
+配置了logback.xml， 不输出sql语句， 需要添加下面的语句 log4j-over-slf4j
+
+##习惯
+1.敲每个点号时，考虑：
+	会不会出现空指针？
+	有没有异常抛出？
+	是不是在热点区域？
+	在哪个线程执行？
+	有没有并发锁间隙？
+	会不会并发修改不可见？
+
 #### intellij idea shortcut 常用快捷键
 1. 去除没有用到的import keymap当中搜索 optimize import， control + alt + o ( MAX OX 10.5)
 2. 查找spring requestmapping  keymap当中搜索 symbol ， alt + command + O  ( MAX OX 10.5)
