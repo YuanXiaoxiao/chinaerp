@@ -1,6 +1,5 @@
 package cn.china.erp.index.dao;
 
-import cn.china.erp.index.bean.Account;
 import cn.china.erp.index.bean.User;
 import junit.framework.Assert;
 import junit.framework.TestCase;
@@ -32,6 +31,6 @@ public class UserDAOTest extends TestCase{
 
     @Test
     public void testGetAccount(){
-        Assert.assertEquals(userDAO.queryById(11111111).getPassword(), "passwordofli");
+        Assert.assertEquals(userDAO.queryById(11111111).getUsername(), user.getUsername());
     }
 }
