@@ -25,14 +25,19 @@ B) 领域模型命名规约
 
 20170223-01
 1. 新增messageconverter，使用fastjson
-1.1引入jar包依赖
-1.2配置xml文件
-1.3加@responsebody注解, annotation that indicates a method return value should be bound to the web response body.
+
+    1.1引入jar包依赖
+
+    1.2配置xml文件
+
+    1.3加@responsebody注解, annotation that indicates a method return value should be bound to the web response body.
 
 20170224-01
 1. 通过xml配置bean时，A类注入C对象属性，A的子类B获取不到该C对象，分析了一下原因，解决方案有两种
-1.1 将A中的C属性声明static
-1.2 在B的bean声明中，加入parent属性
+    
+    1.1 将A中的C属性声明static
+    
+    1.2 在B的bean声明中，加入parent属性
 
 20170224-02
 ~~1. add spring-security~~
@@ -50,12 +55,15 @@ B) 领域模型命名规约
 
 20170307-01
 1. add 日志  实现方式 slf4j && logback
-1.1 查找顺序logback.groovy-->logback-test.xml-->logback.xml,详细配置还是参考文档http://logback.qos.ch/documentation.html
-1.2 logback的日志级别从小到大 ：TRACE, DEBUG, INFO, WARN, ERROR
+
+    1.1 查找顺序logback.groovy-->logback-test.xml-->logback.xml,详细配置还是[参考文档](http://logback.qos.ch/documentation.html)
+
+    1.2 logback的日志级别从小到大 ：TRACE, DEBUG, INFO, WARN, ERROR
 
 20170309-01
 1. logback在控制台输出sql日志，用来追踪问题 添加log4j-over-slf4j依赖
-1.1 仍旧有有问题的点是，打出了其他的日志
+
+    1.1 仍旧有有问题的点是，打出了其他的日志
 
 20170310-01
 1. logback修改了logger配置，这样控制台输出的内容里只有相关的sql执行内容
@@ -68,7 +76,7 @@ B) 领域模型命名规约
 
 20170313-01
 1. update jdbcbasedao extends jdbcdaosupport
-1.1 遗留问题，为什么调用的时候日志没有打出sql语句
+    1.1 遗留问题，为什么调用的时候日志没有打出sql语句
 
 ## Issue
 #### 这里暂时记录下，目前存在的代码实现上的问题
