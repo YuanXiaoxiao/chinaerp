@@ -66,6 +66,10 @@ B) 领域模型命名规约
 20170311-01
 1. add id生成器，仿照Twitter的snowflake算法
 
+20170313-01
+1. update jdbcbasedao extends jdbcdaosupport
+1.1 遗留问题，为什么调用的时候日志没有打出sql语句
+
 ## Issue
 #### 这里暂时记录下，目前存在的代码实现上的问题
 #### 1. xml配置bean注入 
