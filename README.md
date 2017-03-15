@@ -77,6 +77,9 @@ B) 领域模型命名规约
 20170313-01
 1. update jdbcbasedao extends jdbcdaosupport
     1.1 遗留问题，为什么调用的时候日志没有打出sql语句
+    
+20170315-01
+1. ibatis 添加另外的数据库，现有项目访问两个不同的数据库，只需要继承不同的IbatisSupportDAO
 
 ## Issue
 #### 这里暂时记录下，目前存在的代码实现上的问题
